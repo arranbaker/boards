@@ -1,0 +1,25 @@
+.settings-container {
+    margin: 0 auto;
+    height: 80vh;
+    width: 80vw;
+    background-color: $main-color;
+    border-radius: 5px;
+    border: 2px solid black;
+    overflow: hidden;
+    margin-top: 14vh;
+
+    .settings-header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid black;
+        align-items: center;
+
+        h3 {
+            margin-left: 1rem;
+        }
+
+        button {
+            margin-right: 1rem;
+        }
+    }
+}

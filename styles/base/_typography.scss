@@ -1,0 +1,16 @@
+@font-face {
+    font-family: roboto;
+    src: url(../../public/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: jakarta;
+    src: url(../../public/fonts/PlusJakartaSans-Regular.ttf)
+}
+
+$main-font: roboto;
+$second-font: jakarta;
+
+html, body {
+    font-family: $main-font;
+}

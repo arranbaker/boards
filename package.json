@@ -8,9 +8,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "firebase": "^9.6.1",
+    "firebase-admin": "^10.0.1",
+    "framer-motion": "^5.4.5",
     "next": "12.0.7",
+    "nookies": "^2.5.2",
+    "normalize.css": "^8.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-draggable": "^4.4.4",
+    "react-hook-form": "^7.22.0",
+    "sass": "^1.44.0",
+    "stream": "^0.0.2"
   },
   "devDependencies": {
     "eslint": "8.4.1",

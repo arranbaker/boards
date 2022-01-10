@@ -1,0 +1,36 @@
+.error-container {
+    background: rgba(255,255,255, 0.7);
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+
+    .error-details-container {
+        width: auto;
+        height: auto;
+        padding: 0 2rem 2rem 2rem;
+        background: white;
+        border: 2px solid black;
+        border-radius: 5px;
+
+        .error-close {
+            text-align: right;
+            width: auto;
+            display: inline;
+            float: right;
+            padding-top: 1rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        h3 {
+            margin-top: 4rem;
+        }
+    }
+}

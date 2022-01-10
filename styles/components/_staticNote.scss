@@ -1,0 +1,49 @@
+.static-note-container {
+    height: 50vh;
+    width: 80vw;
+    border: 2px solid black;
+    margin: 0;
+    right: 15vw;
+    background: $main-color;
+    z-index: 15;
+    border-radius: 5px;
+    overflow-y: hidden;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+    
+
+    .static-note-header {
+        width: 100%;
+        border-bottom: 2px solid black;
+        height: 10%;
+        max-height: 10%;
+
+        .note-button-list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0;
+            height: 100%;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                margin-right: 2%;
+            }
+
+        }
+    }
+
+    p {
+        margin: 5%;
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+}
+
+@media (min-width: 850px) {
+    .static-note-container {
+        position: absolute;
+        width: 20vw;
+    } 
+}

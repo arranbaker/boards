@@ -1,0 +1,72 @@
+.note-container {
+    height: 50vh;
+    min-width: 80vw;
+    width: 20vw;
+    border: 2px solid black;
+    margin: 0;
+    margin-left: 1rem;
+    background: $main-color;
+    z-index: 15;
+    border-radius: 5px;
+    overflow-y: hidden;
+    
+
+    .note-header {
+        width: 100%;
+        border-bottom: 2px solid black;
+        height: 10%;
+        max-height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        h3 {
+            margin: 0;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .note-button-list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0;
+            height: 100%;
+            padding: 0;
+
+            &:last-child {
+                margin-right: 2%;
+            }
+
+            li {
+                list-style-type: none;
+                margin-right: 2%;
+            }
+
+        }
+    }
+
+    .note {
+        padding: 0.5rem;
+        overflow-x: hidden;
+
+        .note-text {
+            height: 33vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            word-break: break-word;
+            width: 100%;
+            background: $main-color;
+            scrollbar-width: thin;
+            scrollbar-color: lighten(#6969dd, 15%) $main-color;
+        }
+    }
+}
+
+@media (min-width: 850px) {
+    .note-container {
+        min-width: 20vw;
+        width: 20vw;
+    }
+}
+

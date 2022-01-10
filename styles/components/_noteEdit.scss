@@ -1,0 +1,99 @@
+.note-edit-container {
+    position: fixed;
+    background: $main-color;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 20;
+
+    .note-edit-header {
+        width: 100vw;
+        border-bottom: 2px solid black;
+        height: 10vh;
+        max-height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        h3 {
+            margin: 0 2%;
+            padding: 0.5rem;
+        }
+
+        .note-button-list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0;
+            height: 100%;
+            padding: 0;
+            width: 100vw;
+
+            &:last-child {
+                margin-right: 2%;
+            }
+
+            li {
+                list-style-type: none;
+                margin-right: 2%;
+            }
+        }
+    }
+
+    form {
+        margin: 2%;
+        padding: 0;
+    }
+
+    .note-edit {
+        height: auto;
+        margin: 0.25rem;
+        margin-top: 0.5rem;
+        overflow: hidden;
+
+        .note-edit-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 1.3vh;
+            margin-left: 2%;
+            z-index: 0;
+            background: $main-color;
+            height: 8vh;
+            resize: none;
+            outline: none;
+            border: none;
+            font-size: 2rem;
+            white-space: nowrap;
+            overflow:    scroll;
+            overflow-y:  hidden;
+            overflow-x:  hidden;
+            overflow:    -moz-scrollbars-horizontal;
+        }
+        
+        
+        .note-edit-text {
+            height: 60vh;
+            overflow-y: scroll;
+            width: 92%;
+            background: $main-color;
+            border: none;
+            margin:0.5rem;
+            margin-right: 2rem;
+            outline: none;
+            resize: none;
+            scrollbar-width: thin;
+            scrollbar-color: lighten(#6969dd, 15%) $main-color;
+            white-space: pre-wrap;
+        }
+
+       button {
+           width: 6rem;
+           padding: 0.5rem 1rem;
+           margin: 2rem 0 0 0;
+           display: inline;
+       }
+        
+    }
+}

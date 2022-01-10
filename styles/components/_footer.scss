@@ -1,0 +1,49 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border: 1px solid gray;
+    background: $main-color;
+
+    .footer-lists-container {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        padding: 5vh 0;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            font-family: $main-font;
+            line-height: 2;
+            flex-wrap: wrap;
+
+
+            li {
+                font-size: 1.1rem;
+                display: block;
+
+                &::after {
+                    content: '';
+                    height: 5px;
+                    width: 0;
+                    background: $third-color;
+                    display: block;
+                    margin-top: -15px;
+                    transition: 0.4s;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+}
