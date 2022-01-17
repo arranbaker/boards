@@ -1,4 +1,4 @@
-# Baords :memo: 
+# Boards :memo: 
 
 Boards is a note-taking taking web app. Notes can stored in boards to collect ideas in one place. 
 
