@@ -2,8 +2,6 @@ import Note from "./note";
 import { useState } from "react";
 import useFirestore from "../lib/useFirestore";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
-
 
 const UserNoteBoard = ({ boards }) => {
 
@@ -21,15 +19,17 @@ const UserNoteBoard = ({ boards }) => {
 
     return (
         <>
-            <section className="user-note-board-list">
-                <ul>
-                    {boards.map((boardListItem, boardListItemIndex) => {
-                        return (
-                            <li key={boardListItemIndex} id={boardListItemIndex} onClick={(event) => setListItem(boardListItemIndex)} style={{ background: boardListItemIndex === listItem ? '#DED479' : '#ACF3DA' }} className="board-list-item" >{boardListItem.name}</li>
-                        )
-                    })}
-                </ul>
-            </section>
+            {boards.map((boardListItem, boardListItemIndex) => {
+                if (boardListItem) {
+                    return (
+                        <section className="user-note-board-list">
+                            <ul>
+                                <li key={boardListItemIndex} id={boardListItemIndex} onClick={(event) => setListItem(boardListItemIndex)} style={{ background: boardListItemIndex === listItem ? '#DED479' : '#ACF3DA' }} className="board-list-item" >{boardListItem.name}</li>
+                            </ul>
+                        </section>
+                    )
+                } else return null
+            })}
             {boards.map((board, boardIndex) => {
                 if (boardIndex === listItem) {
                     return (

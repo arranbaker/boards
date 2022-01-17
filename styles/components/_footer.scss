@@ -25,24 +25,12 @@ footer {
                 font-size: 1.1rem;
                 display: block;
 
-                &::after {
-                    content: '';
-                    height: 5px;
-                    width: 0;
-                    background: $third-color;
-                    display: block;
-                    margin-top: -15px;
-                    transition: 0.4s;
-                }
-
                 &:hover {
                     cursor: pointer;
+                    text-decoration: underline;
+                    text-decoration-color: $third-color;
+                    text-decoration-thickness: 3px;
                 }
-
-                &:hover::after {
-                    width: 100%;
-                }
-
             }
         }
     }

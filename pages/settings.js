@@ -1,7 +1,7 @@
 import Navbar from "../components/navbar";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const Settings = () => {
 
@@ -9,6 +9,10 @@ const Settings = () => {
 
     return (
         <>
+            <Head>
+                <title>Settings| boards</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <Navbar />
             <motion.section className="settings-container" initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ opacity: 0 }}>
                 <div className="settings-header">

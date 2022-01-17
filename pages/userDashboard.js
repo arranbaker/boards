@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import { db } from "../lib/firebase";
 import { collection, query, onSnapshot, orderBy } from "firebase/firestore";
 import { useAuth } from "../lib/auth";
+import Head from "next/head";
 
 const UserDashbaord = () => {
 
@@ -30,6 +31,10 @@ const UserDashbaord = () => {
 
     return (
         <>
+            <Head>
+                <title>Home | boards</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <Navbar />
             <section className="user-dashboard-container">
                 <motion.div className="db-boards-header-container" exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

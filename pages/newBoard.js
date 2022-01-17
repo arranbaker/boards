@@ -4,6 +4,7 @@ import Navbar from "../components/navbar";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const NewBoard = () => {
 
@@ -11,13 +12,17 @@ const NewBoard = () => {
     const { register, handleSubmit } = useForm();
     const router = useRouter()
 
-    const createBoard = ({ title, display }) => {
-        setBoard(title, display)
+    const createBoard = ({ title }) => {
+        setBoard(title)
         router.push('/userDashboard')
     }
 
     return (
         <>
+            <Head>
+                <title>New Board | boards</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <Navbar />
             <motion.div className="new-board-container" initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ opacity: 0 }}>
                 <div className="new-board-form-container">

@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import ErrorPop from "../components/errorPop";
+import Head from "next/head";
 
 const Login = () => {
 
@@ -31,6 +32,10 @@ const Login = () => {
 
     return (
         <>
+            <Head>
+                <title>Log In | boards</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <Navbar />
             {error && <ErrorPop error={error} setError={setError} />}
             <div className="signup-log-container" >

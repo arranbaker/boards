@@ -6,8 +6,8 @@ import { useAuth } from "../lib/auth";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { setUserDetails } from "../lib/setUser";
 import { updateProfile } from "firebase/auth";
+import Head from "next/head";
 
 const Signup = () => {
 
@@ -42,6 +42,10 @@ const Signup = () => {
 
     return (
         <>
+            <Head>
+                <title>Sign Up | boards</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <Navbar />
             {error && <ErrorPop error={error} setError={setError} errorMessage={errorMessage} />}
             <div className="signup-log-container">
