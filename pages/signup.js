@@ -25,14 +25,13 @@ const Signup = () => {
             setLoading(true)
             await signup(email, password)
                 .then(async (auth) => {
-                    console.log(auth)
                     await updateProfile(auth.user, {
                         displayName: username
                     })
                     router.push('/userDashboard')
                 })
                 .catch((e) => {
-                    setError('Sorry, something went wrong.')
+                    setError(e.code)
                 })
             setLoading(false)
         } else {
